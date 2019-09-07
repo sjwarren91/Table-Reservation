@@ -31,11 +31,16 @@ router.get("/tables", function (req, res) {
 })
 
 router.post("/reserve", function (req, res) {
+
+    console.log('222', req.body);
+
     if (req.body) {
-        var id = uuidv1();
-        req.body.ID = id;
-        reservation.push(req.body);
+        var uuid = uuidv1();
+        var newReservation = {...req.body, id: uuid};
+        console.log(newReservation)
+        reservation.push(newReservation);
         res.json(true);
+
     } else {
         res.json(false);
     }

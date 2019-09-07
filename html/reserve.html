@@ -62,15 +62,18 @@
                     number: $("#phnumber").val().trim()
                 }
 
+                console.log(newReservation);
+
                 $.ajax({
-                        method: "POST",
-                        url: "/api/reserve",
-                        data: newReservation
-                    })
-                    .then(function (data) {
-                        console.log(data);
-                        alert("Making Reservation..");
-                    });
+                    type: "POST",
+                    url: "/api/reserve",
+                    data: JSON.stringify(newReservation),
+                    contentType: "application/json"
+                }).then(function(data){
+                    console.log(data);
+                    alert("Making Reservation..");
+                });
+                
             });
         </script>
 
