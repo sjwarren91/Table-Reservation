@@ -63,7 +63,11 @@
                     number: $("#phnumber").val().trim()
                 }
 
-                $.post("/api/reserve", newReservation)
+                $({
+                    method: "POST", 
+                    url: "/api/reserve", 
+                    data: newReservation
+                })
                     .then(function (data) {
                         console.log(data);
                         alert("Making Reservation..");
