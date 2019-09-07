@@ -40,9 +40,8 @@
                         placeholder="Enter your mobile phone number">
                 </div>
             </form>
-            <a href="#"><button class="btn btn-primary btn-lg w-100 mb-5" id="make_reservation"><span
-                        class="fa fa-plus">Make
-                        Reservation</span></button></a>
+            <button class="btn btn-primary btn-lg w-100 mb-5" id="make_reservation"><span class="fa fa-plus">Make
+                    Reservation</span></button>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -57,7 +56,6 @@
 
         <script type="text/javascript">
             $("#make_reservation").on("click", function () {
-                event.preventDefault();
 
                 var newReservation = {
                     name: $("#name").val().trim(),
