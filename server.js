@@ -10,15 +10,15 @@ app.use("/api", api);
 
 
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "/html/index.html"));
 });
 
 app.get("/tables", function(req, res){
-    res.sendFile(path.join(__dirname, "table.html"));
+    res.sendFile(path.join(__dirname, "/html/table.html"));
 });
 
 app.get("/reserve", function(req, res){
-    res.sendFile(path.join(__dirname, "reserve.html"));
+    res.sendFile(path.join(__dirname, "/html/reserve.html"));
 });
 
 
