@@ -12,8 +12,9 @@
 
 <body>
     <div class="container">
-        <button style="margin: 10px;" class="btn btn-primary">Main page</button>
-        <button style="margin: 10px;" class="btn btn-primary">Make a reservation</button>
+        <button style="margin: 10px;" class="btn btn-primary" onclick="location.replace('/')">Main page</button>
+        <button style="margin: 10px;" class="btn btn-primary" onclick="location.replace('/reserve')">Make a
+            reservation</button>
     </div>
     <div class="card">
         <div class="card-header">
@@ -95,7 +96,7 @@
                 })
             })
             .catch(function (err) {
-                alert(err)
+                // alert(err)
             })
     </script>
 </body>
